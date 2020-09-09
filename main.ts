@@ -31,7 +31,7 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, oth
 let OND_SVAMP: Sprite = null
 let projectile: Sprite = null
 let luigi_spaceship: Sprite = null
-info.setLife(4)
+info.setLife(5)
 info.setScore(0)
 scene.setBackgroundImage(img`
     9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
@@ -176,8 +176,8 @@ luigi_spaceship = sprites.create(img`
 controller.moveSprite(luigi_spaceship, 100, 50)
 luigi_spaceship.setFlag(SpriteFlag.StayInScreen, true)
 game.onUpdate(function () {
-    if (info.score() == 100) {
-        game.over(true)
+    if (info.score() == 50) {
+        game.over(true, effects.splatter)
     }
 })
 game.onUpdateInterval(1000, function () {
