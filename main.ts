@@ -172,6 +172,8 @@ scene.setBackgroundImage(img`
     `)
 luigi_spaceship = sprites.create(img`
     . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
     . . . 7 . . . 7 7 . . . 7 . . . 
     . . . f . . . 4 4 . . . f . . . 
     . . . f . . 7 8 8 7 . . f . . . 
@@ -182,8 +184,6 @@ luigi_spaceship = sprites.create(img`
     . . 8 8 8 8 8 8 8 8 8 8 8 8 . . 
     . . . . 8 8 8 8 8 8 8 8 . . . . 
     . . . . . . 8 8 8 8 . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
@@ -232,7 +232,7 @@ game.onUpdateInterval(1000, function () {
         `, SpriteKind.Enemy)
     OND_SVAMP.y = 0
     OND_SVAMP.x = randint(0, scene.screenWidth())
-    OND_SVAMP.ay = 120
+    OND_SVAMP.ay = 50
 })
 game.onUpdateInterval(40000, function () {
     King_Slime = sprites.create(img`
